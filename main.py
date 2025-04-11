@@ -12,7 +12,7 @@ YOUTUBE_CHANNELS = [
     "UCDy24mzKpEtSm9Ugq8eY-7Q"
 ]
 
-async def send_videos():
+async def main():
     bot = Bot(token=TOKEN)
     while True:
         try:
@@ -31,4 +31,4 @@ def get_videos(channel_id):
     return [f"https://youtu.be/{item['id']['videoId']}" for item in response.get('items', [])]
 
 if __name__ == "__main__":
-    asyncio.run(send_videos())
+    asyncio.run(main())  # اجرای تابع async
